@@ -84,6 +84,29 @@ Para criar uma nova branch no repositório nós adicionaremos a flag `-b` no com
     git checkout -b <nome-da-branch>
 
 
+### `git pull`
+
+O `git pull` primeiro baixa o conteúdo do repositório remoto especificado e depois faz um merge do conteúdo remoto para um novo commit local.
+
+    git pull <repositório>
+
+Aqui vemos que o repositório remoto (A-B-C) está em uma ramificação diferente do local (E-F-G).
+
+![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/gitpull0.png)
+
+O comando git pull irá juntar o commit C com o G e formar o commit H no local, que estará atualizado.
+
+![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/gitpull1.png)
+
+<sub>Imagens retiradas de [Atlassian](https://www.atlassian.com/git/tutorials/syncing/git-pull)
+
+
+Exemplo:
+
+    git pull main
+
+
+
 ### Erros ao criar esse repositório que podem ser úteis
 
 Ao fazer o `push` me deparei com a seguinte mensagem de erro:
@@ -92,7 +115,7 @@ Ao fazer o `push` me deparei com a seguinte mensagem de erro:
 
 Este erro surgiu porque o meu repositório local estava sem alguns commits do meu repositório remoto. Utilizei o comando `git pull --rebase` que faz com que o repositório local seja colocado ao fim da branch master, ou seja, os commits ausentes serão juntados com os commits do repositório local.
 
-Abaixo está um diagrama mostrando melhor sobre, retirado de https://www.gitkraken.com/learn/git/git-rebase
+Abaixo está um diagrama mostrando melhor sobre, retirado de [Git Kraken](https://www.gitkraken.com/learn/git/git-rebase)
 
 ![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/git_rebase0.png)
 
