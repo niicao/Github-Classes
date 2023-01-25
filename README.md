@@ -58,7 +58,7 @@ Exemplo: um time está desenvolvendo um aplicativo com múltiplas features, é d
 
 Também é comum que sejam criadas branches de *hotfix* (correções de emergência) entre um `commit` e outro na master branch.
 
-![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/git_diagram.png)
+<!-- ![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/git_diagram.png) -->
 
 ## Comandos
 
