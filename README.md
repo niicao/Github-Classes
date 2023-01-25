@@ -83,3 +83,19 @@ Para criar uma nova branch no repositório nós adicionaremos a flag `-b` no com
 
     git checkout -b <nome-da-branch>
 
+
+### Erros ao criar esse repositório que podem ser úteis
+
+Ao fazer o `push` me deparei com a seguinte mensagem de erro:
+
+    error: failed to push some refs to 'https://github.com/niicao/Github-Classes.git'
+
+Este erro surgiu porque o meu repositório local estava sem alguns commits do meu repositório remoto. Utilizei o comando `git pull --rebase` que faz com que o repositório local seja colocado ao fim da branch master, ou seja, os commits ausentes serão juntados com os commits do repositório local.
+
+Abaixo está um diagrama mostrando melhor sobre, retirado de https://www.gitkraken.com/learn/git/git-rebase
+
+![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/git_rebase0.png)
+
+![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/git_rebase1.png)
+
+![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/git_rebase2.png)
