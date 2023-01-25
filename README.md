@@ -47,3 +47,39 @@ Inclui todos os arquivos alterados no commit. Arquivos que não foram registrado
 * --amend
 
 Substitui o ultimo commit feito com as mudanças e/ou uma nova mensagem de commit. Esse comando só deve ser utilizado em commits que ainda não foram pushados (`git push`).
+
+## Branching
+Branch é o nome dado a cada versão diferente de um repositório que está sendo desenvolvido. A branch chamada `master` é a versão principal do seu programa. Quando se trabalha em outra branch, não é possível ver as alterações feitas fora da branch em que você está trabalhando.
+
+### Qual a utilidade de branches?
+Quando se está trabalhando em um projeto, especialmente com várias pessoas, é necessário separar o que cada uma está fazendo, para evitar o acúmulo de problemas.
+
+Exemplo: um time está desenvolvendo um aplicativo com múltiplas features, é de extrema importância que cada feature esteja sendo desenvolvida em uma branch para não só organizar o trabalho sendo feito como facilitar a detecção de erros ao longo do projeto.
+
+Também é comum que sejam criadas branches de *hotfix* (correções de emergência) entre um `commit` e outro na master branch.
+
+![alt-text](https://github.com/niicao/Github-Classes/blob/main/Imagens/git_diagram.png)
+
+## Comandos
+
+### `git branch`
+O comando `git branch` vai retornar as branches existentes em um repositório e irá marcar com um asterisco a branch em que você se encontra
+
+    * main
+      feature-1
+### `git checkout`
+Este comando é usado para trocar de branch.
+    
+    git checkout feature-1
+    git branch
+
+Irá retornar
+
+    * feature-1
+      main
+
+### Criar uma nova branch
+Para criar uma nova branch no repositório nós adicionaremos a flag `-b` no comando `git checkout`
+
+    git checkout -b <nome-da-branch>
+
